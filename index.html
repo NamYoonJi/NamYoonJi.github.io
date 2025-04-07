@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NAM YOON JI</title>
-
-  <!-- 둥근모 폰트 가져오기 -->
   <link href="https://fonts.googleapis.com/css2?family=Dung+Geun+Mo&display=swap" rel="stylesheet">
-
   <style>
     body {
       background-color: #000;
       color: #00ecff;
-      font-family: 'Dung Geun Mo', 'Courier New', Courier, monospace, sans-serif;
+      font-family: 'Courier New', Courier, monospace, 'Nanum Gothic', 'Noto Sans KR', sans-serif;
       padding: 40px;
       line-height: 1.8;
+    }
+    .korean {
+   font-family: 'Dung Geun Mo', 'Nanum Gothic', sans-serif;
     }
 
     .container {
@@ -35,16 +35,13 @@
 
     table {
       width: 100%;
-      max-width: none;
+      max-width: 600px;
       margin: auto;
-      table-layout: fixed;
     }
 
     td {
       padding: 4px 8px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      word-break: keep-all;
     }
 
     .note {
@@ -80,7 +77,7 @@
 
     <div class="section-title">EDUCATION</div>
     <table>
-      <tr><td>SUNGKYUNKWAN UNIVERSITY</td><td>성균관대학교</td><td>2022–2026</td></tr>
+      <tr><td>SUNGKYUNKWAN UNIVERSITY</td><td  class="korean">성균관대학교</td><td>2022–2026</td></tr>
       <tr><td>Department of Data Science</td><td>GPA</td><td>4.44</td></tr>
     </table>
 

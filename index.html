@@ -4,100 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NAM YOON JI</title>
-  <style>
-    body{
-      margin:0;
-      min-height:100vh;
-      background: linear-gradient(135deg, #000000, #000000);
-      background-size:400% 400%;
-      animation: gradientBG 10s ease infinite;
-      color:#00ecff;
-      font-family:'Avenir','Helvetica Neue',Helvetica,Arial,sans-serif;
-      padding:40px;
-      line-height:1.6;
-      letter-spacing:-0.3px;
-    }
-    .korean{ font-family:'Dung Geun Mo','Nanum Gothic',sans-serif; }
-
-    /* full-bleed banner (NEW) */
-    .banner{
-      width:100vw;
-      display:flex;
-      justify-content:center; /* centers the <pre> */
-      padding:8px 0 24px;
-      margin-left:calc(50% - 50vw);  /* true full bleed even with body padding */
-      margin-right:calc(50% - 50vw);
-      overflow:hidden;
-    }
-    /* responsive rainbow ASCII text */
-    .ascii-art{
-      font-family:"Fira Code", "DejaVu Sans Mono", Menlo, Consolas, monospace;
-      white-space:pre;
-      text-align:center;
-      line-height:1.08;
-
-      /* fit to viewport width */
-      font-size:1.05vw;      /* adjust if you want larger/smaller */
-      max-width:100%;
-      transform-origin:top center;
-
-      /* rainbow gradient */
-      background:linear-gradient(90deg,#ff4d4d,#ff8a3d,#ffd23d,#b5ff3d,#49a8ff,#a35bff,#ff5bd4);
-      background-size:200% auto;
-      -webkit-background-clip:text;
-              background-clip:text;
-      color:transparent;
-      animation:rainbow 6s linear infinite;
-    }
-    @keyframes rainbow{
-      0%{background-position:0% 50%}
-      100%{background-position:200% 50%}
-    }
-
-    .container{
-      max-width:700px;
-      margin:0 auto;
-      text-align:left;
-    }
-    .section-title{ margin-top:40px; font-weight:bold; }
-    table{ width:100%; max-width:600px; margin:auto; }
-    td{ padding:4px 8px; word-break:keep-all; }
-    .note{ font-size:.7em; color:#aaffaa; text-align:right; margin-top:20px; }
-    .custom-line{ border:none; border-top:1px dashed #ffffff; margin:10px 0 20px; }
-
-    @keyframes gradientBG{
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
-    /* very small screens: nudge smaller to avoid wrap */
-    @media (max-width:600px){ .ascii-art{ font-size:1.8vw; } }
-  </style>
+  <!-- 외부 CSS 불러오기 -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- MOVE ASCII ART OUTSIDE .container -->
+  <!-- ASCII Banner -->
   <div class="banner">
     <pre class="ascii-art"><code>
       ___       __    ______                                 _____              
 __ |     / /_______  /__________________ ________      __  /______        
-__ | /| / /_  _ &#92;_  /_  ___/  __ &#92;_  __ `__ &#92;  _ &#92;     _  __/  __ &#92;       
+__ | /| / /_  _ \_  /_  ___/  __ \_  __ `__ \  _ \     _  __/  __ \       
 __ |/ |/ / /  __/  / / /__ / /_/ /  / / / / /  __/     / /_ / /_/ /       
 ____/|__/  \___//_/  \___/ \____//_/ /_/ /_/\___/      \__/ \____/        
                                                                           
 _____   __                       __  __                  _____________    
 ___  | / /_____ _______ ___      _ \/ /________________________(_)__(_)   
-__   |/ /_  __ `/_  __ `__ &#92;     __  /_  __ \  __ \_  __ \____  /__  /    
-_  /|  / / /_/ /_  / / / / /     _  / / /_/ / /_/ /  / / /___  / _  /     
-/_/ |_/  &#92;__,_/ /_/ /_/ /_/      /_/  &#92;____/&#92;____//_/ /_/___  /  /_/      
+__   |/ /_  __ `/_  __ `__ \     __  /_  __ \  __ \_  __ \____  /__  /    
+_  /|  / / /_/ /_  / / / / /     _  / /_/ / /_/ /  / / /___  / _  /     
+/_/ |_/  \__,_/ /_/ /_/ /_/      /_/  \____/\____//_/ /_/___  /  /_/      
                                                          /___/            
 _____________  ___________  ____________     _____________________        
 __  __ \_|__ \ __<  /_|__ \ __<  /_  __ \    ___  /___  __/_  ___/        
-_  / / /___/ / __  /____/ / __  /_  /_/ /    __  / __  /  _____ &#92;         
+_  / / /___/ / __  /____/ / __  /_  /_/ /    __  / __  /  _____ \         
 / /_/ /_  __/___  / _  __/___  / _\__, /     _  /___  /   ____/ /         
 \____/ /____/(_)_/  /____/(_)_/  /____/      /_____/_/    /____/          
-                                                                          
-</code></pre>
+    </code></pre>
   </div>
 
   <div class="container">
@@ -118,23 +50,25 @@ _  / / /___/ / __  /____/ / __  /_  /_/ /    __  / __  /  _____ &#92;
     <div class="section-title">research interests</div>
     <hr class="custom-line">
     <table>
-      <tr><td>multimodal ai, especially audio-language and vision-language</td><td></td><td></td></tr>
-      <tr><td>efficiently updating llms</td><td></td><td></td></tr>
+      <tr><td>multimodal ai, especially audio-language and vision-language</td></tr>
+      <tr><td>efficiently updating llms</td></tr>
     </table>
 
     <div class="section-title">papers?</div>
     <hr class="custom-line">
-    <table><tr><td>MemEIC: A Step Toward Continual and Compositional Knowledge Editing</td><td></td><td></td></tr></table>
-    <table><tr><td>Jin Seong, Jiyun Park, Wencke Liermann, Hongseok Choi, Yoonji Nam, Hyun Kim, Soojong Lim, Namhoon Lee</td><td></td><td></td></tr></table>
-    <table><tr><td>NeuRIPS 2025</td><td></td><td></td></tr></table>
+    <table><tr><td class="paper-title">MemEIC: A Step Toward Continual and Compositional Knowledge Editing</td></tr></table>
+    <table><tr><td class="paper-authors">Jin Seong, Jiyun Park, Wencke Liermann, Hongseok Choi, Yoonji Nam, Hyun Kim, Soojong Lim, Namhoon Lee</td></tr></table>
+    <table><tr><td class="paper-conf">NeurIPS 2025</td></tr></table>
+
     <div class="section-title">in my free time</div>
     <hr class="custom-line">
-    <table><tr><td>photography</td><td>SONY A7M4</td><td></td></tr></table>
+    <table><tr><td>photography</td><td>SONY A7M4</td></tr></table>
 
     <div class="note">
       /contact<br />yoon7k3@gmail.com or seinundzeit@g.skku.edu
     </div>
   </div>
+
   <script>
   // escape backslashes in the ASCII banner only
   (function () {
@@ -142,6 +76,6 @@ _  / / /___/ / __  /____/ / __  /_  /_/ /    __  / __  /  _____ &#92;
     if (!el) return;
     el.innerHTML = el.textContent.replace(/\\/g, '&#92;');
   })();
-</script>
+  </script>
 </body>
 </html>

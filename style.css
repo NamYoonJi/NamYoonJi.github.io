@@ -26,7 +26,7 @@ body{
 
 /* rainbow ASCII text */
 .ascii-art{
-  font-family:"Fira Code", "DejaVu Sans Mono", Menlo, Consolas, monospace;
+  font-family:"Fira Code","DejaVu Sans Mono",Menlo,Consolas,monospace;
   white-space:pre;
   text-align:center;
   line-height:1.08;
@@ -65,16 +65,19 @@ td{ padding:4px 8px; word-break:keep-all; }
 @media (max-width:600px){ .ascii-art{ font-size:1.8vw; } }
 
 /* === papers 전용 스타일 === */
-.papers-title {
-  font-family: 'Courier New', Courier, monospace;
-  letter-spacing: -1px;
-  color: #ffcc00;
-}
-
-.papers-list td {
+.paper-title {
   font-family: 'Courier New', monospace;
+  font-weight: bold;
   letter-spacing: -0.5px;
   color: #ffcc00;
-  font-size: 0.95em;
-  line-height: 1.4;
+}
+.paper-authors {
+  font-family: 'Avenir','Helvetica Neue',sans-serif;
+  font-size: 0.9em;
+  color: #cccccc;
+}
+.paper-conf {
+  font-family: 'Fira Code', monospace;
+  font-style: italic;
+  color: #66ffcc;
 }

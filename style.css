@@ -1,0 +1,80 @@
+body{
+  margin:0;
+  min-height:100vh;
+  background: linear-gradient(135deg, #000000, #000000);
+  background-size:400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color:#00ecff;
+  font-family:'Avenir','Helvetica Neue',Helvetica,Arial,sans-serif;
+  padding:40px;
+  line-height:1.6;
+  letter-spacing:-0.3px;
+}
+
+.korean{ font-family:'Dung Geun Mo','Nanum Gothic',sans-serif; }
+
+/* full-bleed banner */
+.banner{
+  width:100vw;
+  display:flex;
+  justify-content:center;
+  padding:8px 0 24px;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  overflow:hidden;
+}
+
+/* rainbow ASCII text */
+.ascii-art{
+  font-family:"Fira Code", "DejaVu Sans Mono", Menlo, Consolas, monospace;
+  white-space:pre;
+  text-align:center;
+  line-height:1.08;
+  font-size:1.05vw;
+  max-width:100%;
+  transform-origin:top center;
+  background:linear-gradient(90deg,#ff4d4d,#ff8a3d,#ffd23d,#b5ff3d,#49a8ff,#a35bff,#ff5bd4);
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:rainbow 6s linear infinite;
+}
+
+@keyframes rainbow{
+  0%{background-position:0% 50%}
+  100%{background-position:200% 50%}
+}
+
+.container{
+  max-width:700px;
+  margin:0 auto;
+  text-align:left;
+}
+.section-title{ margin-top:40px; font-weight:bold; }
+table{ width:100%; max-width:600px; margin:auto; }
+td{ padding:4px 8px; word-break:keep-all; }
+.note{ font-size:.7em; color:#aaffaa; text-align:right; margin-top:20px; }
+.custom-line{ border:none; border-top:1px dashed #ffffff; margin:10px 0 20px; }
+
+@keyframes gradientBG{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@media (max-width:600px){ .ascii-art{ font-size:1.8vw; } }
+
+/* === papers 전용 스타일 === */
+.papers-title {
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: -1px;
+  color: #ffcc00;
+}
+
+.papers-list td {
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.5px;
+  color: #ffcc00;
+  font-size: 0.95em;
+  line-height: 1.4;
+}

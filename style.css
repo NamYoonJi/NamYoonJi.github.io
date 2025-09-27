@@ -81,3 +81,35 @@ td{ padding:4px 8px; word-break:keep-all; }
   font-style: italic;
   color: #66ffcc;
 }
+
+/* ===== CV grid ===== */
+.cv { display: grid; gap: 12px; }
+
+/* 3-column row: [left | middle | date] */
+.cv-row {
+  display: grid;
+  grid-template-columns: minmax(0,1.5fr) minmax(0,1fr) auto;
+  column-gap: 16px;
+  align-items: start;
+}
+
+/* text handling */
+.cv-col { line-height: 1.4; }
+.cv-col.en { overflow-wrap: anywhere; word-break: normal; } /* long English ok */
+.cv-col.ko { font-family:'Dung Geun Mo','Nanum Gothic',sans-serif; }
+
+/* keep dates on one line, right-aligned on wide screens */
+.cv-col.date { white-space: nowrap; justify-self: end; }
+
+/* simple 1-column rows (for lists) */
+.cv-1col { display: grid; grid-template-columns: 1fr; gap: 6px; }
+.cv-1col .cv-row { grid-template-columns: 1fr; }
+
+/* compact spacing inside sections */
+.section { margin-bottom: 18px; }
+
+/* Mobile: stack rows */
+@media (max-width: 600px) {
+  .cv-row { grid-template-columns: 1fr; row-gap: 4px; }
+  .cv-col.date { justify-self: start; }
+}

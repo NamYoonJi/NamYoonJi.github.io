@@ -18,7 +18,7 @@ body{
   width:100vw;
   display:flex;
   justify-content:center;
-  padding:8px 0 24px;
+  padding:7px 0 24px;
   margin-left:calc(50% - 50vw);
   margin-right:calc(50% - 50vw);
   overflow:hidden;
@@ -47,14 +47,14 @@ body{
 }
 
 .container{
-  max-width:700px;
+  max-width:600px;
   margin:0 auto;
   text-align:left;
 }
 .section-title{ margin-top:40px; font-weight:bold; }
 table{ width:100%; max-width:600px; margin:auto; }
 td{ padding:4px 8px; word-break:keep-all; }
-.note{ font-size:.7em; color:#aaffaa; text-align:right; margin-top:20px; }
+.note{ font-size:.6em; color:#aaffaa; text-align:right; margin-top:20px; }
 .custom-line{ border:none; border-top:1px dashed #ffffff; margin:10px 0 20px; }
 
 @keyframes gradientBG{

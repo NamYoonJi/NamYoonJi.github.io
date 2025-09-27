@@ -4,8 +4,121 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NAM YOON JI</title>
-  <!-- 외부 CSS 불러오기 -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      background: linear-gradient(135deg, #000000, #000000);
+      background-size:400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color:#00ecff;
+      font-family:'Avenir','Helvetica Neue',Helvetica,Arial,sans-serif;
+      padding:40px;
+      line-height:1.6;
+      letter-spacing:-0.3px;
+    }
+
+    .korean{ font-family:'Dung Geun Mo','Nanum Gothic',sans-serif; }
+
+    /* full-bleed banner */
+    .banner{
+      width:100vw;
+      display:flex;
+      justify-content:center;
+      padding:7px 0 24px;
+      margin-left:calc(50% - 50vw);
+      margin-right:calc(50% - 50vw);
+      overflow:hidden;
+    }
+
+    /* rainbow ASCII text */
+    .ascii-art{
+      font-family:"Fira Code","DejaVu Sans Mono",Menlo,Consolas,monospace;
+      white-space:pre;
+      text-align:center;
+      line-height:1.08;
+      font-size:1.05vw;
+      max-width:100%;
+      transform-origin:top center;
+      background:linear-gradient(90deg,#ff4d4d,#ff8a3d,#ffd23d,#b5ff3d,#49a8ff,#a35bff,#ff5bd4);
+      background-size:200% auto;
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      animation:rainbow 6s linear infinite;
+    }
+
+    @keyframes rainbow{
+      0%{background-position:0% 50%}
+      100%{background-position:200% 50%}
+    }
+
+    .container{
+      max-width:600px;
+      margin:0 auto;
+      text-align:left;
+    }
+    .section-title{ margin-top:40px; font-weight:bold; }
+    .note{ font-size:.6em; color:#aaffaa; text-align:right; margin-top:20px; }
+    .custom-line{ border:none; border-top:1px dashed #ffffff; margin:10px 0 20px; }
+
+    @keyframes gradientBG{
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    @media (max-width:600px){ .ascii-art{ font-size:1.8vw; } }
+
+    /* === papers 전용 스타일 === */
+    .paper-title {
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      letter-spacing: -0.5px;
+      color: #ffcc00;
+    }
+    .paper-authors {
+      font-family: 'Avenir','Helvetica Neue',sans-serif;
+      font-size: 0.9em;
+      color: #cccccc;
+    }
+    .paper-conf {
+      font-family: 'Fira Code', monospace;
+      font-style: italic;
+      color: #66ffcc;
+    }
+
+    /* ===== CV grid ===== */
+    .cv { display: grid; gap: 12px; }
+
+    /* 3-column row: [left | middle | date] */
+    .cv-row {
+      display: grid;
+      grid-template-columns: minmax(0,1.5fr) minmax(0,1fr) auto;
+      column-gap: 16px;
+      align-items: start;
+    }
+
+    /* text handling */
+    .cv-col { line-height: 1.4; }
+    .cv-col.en { overflow-wrap: anywhere; word-break: normal; }
+    .cv-col.ko { font-family:'Dung Geun Mo','Nanum Gothic',sans-serif; }
+
+    /* dates */
+    .cv-col.date { white-space: nowrap; justify-self: end; }
+
+    /* one-column rows */
+    .cv-1col { display: grid; grid-template-columns: 1fr; gap: 6px; }
+    .cv-1col .cv-row { grid-template-columns: 1fr; }
+
+    /* spacing between sections */
+    .section { margin-bottom: 18px; }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .cv-row { grid-template-columns: 1fr; row-gap: 4px; }
+      .cv-col.date { justify-self: start; }
+    }
+  </style>
 </head>
 <body>
 
@@ -17,7 +130,7 @@ __ |     / /_______  /__________________ ________      __  /______
 __ | /| / /_  _ \_  /_  ___/  __ \_  __ `__ \  _ \     _  __/  __ \       
 __ |/ |/ / /  __/  / / /__ / /_/ /  / / / / /  __/     / /_ / /_/ /       
 ____/|__/  \___//_/  \___/ \____//_/ /_/ /_/\___/      \__/ \____/        
-                                                                          
+
 _____   __                       __  __                  _____________    
 ___  | / /_____ _______ ___      _ \/ /________________________(_)__(_)   
 __   |/ /_  __ `/_  __ `__ \     __  /_  __ \  __ \_  __ \____  /__  /    
@@ -33,37 +146,80 @@ _  / / /___/ / __  /____/ / __  /_  /_/ /    __  / __  /  _____ \
   </div>
 
   <div class="container">
-    <div class="section-title">education</div>
-    <hr class="custom-line">
-    <table>
-      <tr><td>sungkyunkwan univ.</td><td class="korean">성균관대학교</td><td>2022–2026</td></tr>
-      <tr><td>department of data science</td><td>GPA</td><td>4.45</td></tr>
-    </table>
 
-    <div class="section-title">experiences</div>
-    <hr class="custom-line">
-    <table>
-      <tr><td>ETRI (Electronics and Telecommunications Research Institute)</td><td>research intern</td><td>2025.01. – 2025.02.</td></tr>
-      <tr><td>Seoul National University Vision and Learning Lab (Advisor: Gunhee Kim)</td><td>undergrad intern</td><td>2025.03. – present.</td></tr>
-    </table>
+    <!-- education -->
+    <div class="section section-edu">
+      <div class="section-title">education</div>
+      <hr class="custom-line">
+      <div class="cv">
+        <div class="cv-row">
+          <div class="cv-col en">sungkyunkwan univ.</div>
+          <div class="cv-col ko">성균관대학교</div>
+          <div class="cv-col date">2022–2026</div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-col en">department of data science</div>
+          <div class="cv-col en">GPA</div>
+          <div class="cv-col date">4.45</div>
+        </div>
+      </div>
+    </div>
 
-    <div class="section-title">research interests</div>
-    <hr class="custom-line">
-    <table>
-      <tr><td>multimodal ai, especially audio-language and vision-language</td></tr>
-      <tr><td>efficiently updating llms</td></tr>
-    </table>
+    <!-- experiences -->
+    <div class="section section-exp">
+      <div class="section-title">experiences</div>
+      <hr class="custom-line">
+      <div class="cv">
+        <div class="cv-row">
+          <div class="cv-col en">ETRI (Electronics and Telecommunications Research Institute)</div>
+          <div class="cv-col en">research intern</div>
+          <div class="cv-col date">2025.01 – 2025.02</div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-col en">Seoul National University Vision and Learning Lab (Advisor: Gunhee Kim)</div>
+          <div class="cv-col en">undergrad intern</div>
+          <div class="cv-col date">2025.03 – present.</div>
+        </div>
+      </div>
+    </div>
 
-    <div class="section-title">papers?</div>
-    <hr class="custom-line">
-    <table><tr><td class="paper-title">MemEIC: A Step Toward Continual and Compositional Knowledge Editing</td></tr></table>
-    <table><tr><td class="paper-authors">Jin Seong, Jiyun Park, Wencke Liermann, Hongseok Choi, Yoonji Nam, Hyun Kim, Soojong Lim, Namhoon Lee</td></tr></table>
-    <table><tr><td class="paper-conf">NeurIPS 2025</td></tr></table>
+    <!-- research interests -->
+    <div class="section section-interests">
+      <div class="section-title">research interests</div>
+      <hr class="custom-line">
+      <div class="cv cv-1col">
+        <div class="cv-row"><div class="cv-col">multimodal ai, especially audio-language and vision-language</div></div>
+        <div class="cv-row"><div class="cv-col">efficiently updating llms</div></div>
+      </div>
+    </div>
 
-    <div class="section-title">in my free time</div>
-    <hr class="custom-line">
-    <table><tr><td>photography</td><td><a href="https://www.instagram.com/0__.0__.0__?igsh=MTFhd253ZXlja3ZveA==">@0__.0__.0__</a></td></tr></table>
+    <!-- papers -->
+    <div class="section section-papers">
+      <div class="section-title">papers?</div>
+      <hr class="custom-line">
+      <div class="cv cv-1col">
+        <div class="cv-row"><div class="cv-col paper-title">MemEIC: A Step Toward Continual and Compositional Knowledge Editing</div></div>
+        <div class="cv-row"><div class="cv-col paper-authors">Jin Seong, Jiyun Park, Wencke Liermann, Hongseok Choi, Yoonji Nam, Hyun Kim, Soojong Lim, Namhoon Lee</div></div>
+        <div class="cv-row"><div class="cv-col paper-conf">NeurIPS 2025</div></div>
+      </div>
+    </div>
 
+    <!-- free time -->
+    <div class="section section-free">
+      <div class="section-title">in my free time</div>
+      <hr class="custom-line">
+      <div class="cv">
+        <div class="cv-row">
+          <div class="cv-col">photography</div>
+          <div class="cv-col">
+            <a href="https://www.instagram.com/0__.0__.0__?igsh=MTFhd253ZXlja3ZveA==" target="_blank" rel="noopener">@0__.0__.0__</a>
+          </div>
+          <div class="cv-col date"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact -->
     <div class="note">
       /contact<br />yoon7k3@gmail.com or seinundzeit@g.skku.edu
     </div>

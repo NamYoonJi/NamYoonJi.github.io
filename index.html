@@ -1,237 +1,97 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NAM YOON JI</title>
-  <style>
-    body{
-      margin:0;
-      min-height:100vh;
-      background: linear-gradient(135deg, #000000, #000000);
-      background-size:400% 400%;
-      animation: gradientBG 10s ease infinite;
-      color:#00ecff;
-      font-family:'Avenir','Helvetica Neue',Helvetica,Arial,sans-serif;
-      padding:40px;
-      line-height:1.6;
-      letter-spacing:-0.3px;
-    }
-
-    .korean{ font-family:'Dung Geun Mo','Nanum Gothic',sans-serif; }
-
-    /* full-bleed banner */
-    .banner{
-      width:100vw;
-      display:flex;
-      justify-content:center;
-      padding:7px 0 24px;
-      margin-left:calc(50% - 50vw);
-      margin-right:calc(50% - 50vw);
-      overflow:hidden;
-    }
-
-    /* rainbow ASCII text */
-    .ascii-art{
-      font-family:"Fira Code","DejaVu Sans Mono",Menlo,Consolas,monospace;
-      white-space:pre;
-      text-align:center;
-      line-height:1.08;
-      font-size:1.05vw;
-      max-width:100%;
-      transform-origin:top center;
-      background:linear-gradient(90deg,#ff4d4d,#ff8a3d,#ffd23d,#b5ff3d,#49a8ff,#a35bff,#ff5bd4);
-      background-size:200% auto;
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
-      animation:rainbow 6s linear infinite;
-    }
-
-    @keyframes rainbow{
-      0%{background-position:0% 50%}
-      100%{background-position:200% 50%}
-    }
-
-    .container{
-      max-width:600px;
-      margin:0 auto;
-      text-align:left;
-    }
-    .section-title{ margin-top:40px; font-weight:bold; }
-    .note{ font-size:.6em; color:#aaffaa; text-align:right; margin-top:20px; }
-    .custom-line{ border:none; border-top:1px dashed #ffffff; margin:10px 0 20px; }
-
-    @keyframes gradientBG{
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
-    @media (max-width:600px){ .ascii-art{ font-size:1.8vw; } }
-
-    /* === papers 전용 스타일 === */
-    .paper-title {
-      font-family: 'Courier New', monospace;
-      font-weight: bold;
-      letter-spacing: -0.5px;
-      color: #ffcc00;
-    }
-    .paper-authors {
-      font-family: 'Avenir','Helvetica Neue',sans-serif;
-      font-size: 0.9em;
-      color: #cccccc;
-    }
-    .paper-conf {
-      font-family: 'Fira Code', monospace;
-      font-style: italic;
-      color: #66ffcc;
-    }
-
-    /* ===== CV grid ===== */
-    .cv { display: grid; gap: 12px; }
-
-    /* 3-column row: [left | middle | date] */
-    .cv-row {
-      display: grid;
-      grid-template-columns: minmax(0,1.5fr) minmax(0,1fr) auto;
-      column-gap: 16px;
-      align-items: start;
-    }
-
-    /* text handling */
-    .cv-col { line-height: 1.4; }
-    .cv-col.en { overflow-wrap: anywhere; word-break: normal; }
-    .cv-col.ko { font-family:'Dung Geun Mo','Nanum Gothic',sans-serif; }
-
-    /* dates */
-    .cv-col.date { white-space: nowrap; justify-self: end; }
-
-    /* one-column rows */
-    .cv-1col { display: grid; grid-template-columns: 1fr; gap: 6px; }
-    .cv-1col .cv-row { grid-template-columns: 1fr; }
-
-    /* spacing between sections */
-    .section { margin-bottom: 18px; }
-
-    /* Mobile */
-    @media (max-width: 600px) {
-      .cv-row { grid-template-columns: 1fr; row-gap: 4px; }
-      .cv-col.date { justify-self: start; }
-    }
-  </style>
+  <title>Yoonji Nam</title>
+  <meta name="description"
+    content="Yoonji Nam - M.S/Ph.D. student in Vision and Learning Lab at Seoul National University. Research interests in multi-modal AI, speech LMs, and omni-modalities." />
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-  <!-- ASCII Banner -->
-  <div class="banner">
-    <pre class="ascii-art"><code>
-      ___       __    ______                                 _____              
-__ |     / /_______  /__________________ ________      __  /______        
-__ | /| / /_  _ \_  /_  ___/  __ \_  __ `__ \  _ \     _  __/  __ \       
-__ |/ |/ / /  __/  / / /__ / /_/ /  / / / / /  __/     / /_ / /_/ /       
-____/|__/  \___//_/  \___/ \____//_/ /_/ /_/\___/      \__/ \____/        
-
-_____   __                       __  __                  _____________    
-___  | / /_____ _______ ___      _ \/ /________________________(_)__(_)   
-__   |/ /_  __ `/_  __ `__ \     __  /_  __ \  __ \_  __ \____  /__  /    
-_  /|  / / /_/ /_  / / / / /     _  / /_/ / /_/ /  / / /___  / _  /     
-/_/ |_/  \__,_/ /_/ /_/ /_/      /_/  \____/\____//_/ /_/___  /  /_/      
-                                                         /___/            
-_____________  ___________  ____________     _____________________        
-__  __ \_|__ \ __<  /_|__ \ __<  /_  __ \    ___  /___  __/_  ___/        
-_  / / /___/ / __  /____/ / __  /_  /_/ /    __  / __  /  _____ \         
-/ /_/ /_  __/___  / _  __/___  / _\__, /     _  /___  /   ____/ /         
-\____/ /____/(_)_/  /____/(_)_/  /____/      /_____/_/    /____/          
-    </code></pre>
-  </div>
-
   <div class="container">
-
-    <!-- education -->
-    <div class="section section-edu">
-      <div class="section-title">education</div>
-      <hr class="custom-line">
-      <div class="cv">
-        <div class="cv-row">
-          <div class="cv-col en">sungkyunkwan univ.</div>
-          <div class="cv-col ko">성균관대학교</div>
-          <div class="cv-col date">2022–2026</div>
-        </div>
-        <div class="cv-row">
-          <div class="cv-col en">department of data science</div>
-          <div class="cv-col en">GPA</div>
-          <div class="cv-col date">4.45</div>
-        </div>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="profile-photo">
+        <!-- 프로필 사진을 여기에 추가하세요 -->
+        <!-- <img src="profile.jpg" alt="Yoonji Nam"> -->
       </div>
-    </div>
+      <div class="profile-info">
+        <h1 class="name">Yoonji Nam</h1>
+        <p class="title">M.S./Ph.D. student.</p>
+        <p class="title">Dept. of Computer Science and Engineering at Seoul National University.</p>
+        <p class="contact">
+          Contact: <a href="mailto:yoonji.nam@vision.snu.ac.kr">yoonji.nam@vision.snu.ac.kr</a> /
+          <a href="mailto:yoon7k3@gmail.com">yoon7k3@gmail.com</a>
+        </p>
 
-    <!-- experiences -->
-    <div class="section section-exp">
-      <div class="section-title">experiences</div>
-      <hr class="custom-line">
-      <div class="cv">
-        <div class="cv-row">
-          <div class="cv-col en">ETRI (Electronics and Telecommunications Research Institute)</div>
-          <div class="cv-col en">research intern</div>
-          <div class="cv-col date">2025.01 – 2025.02</div>
-        </div>
-        <div class="cv-row">
-          <div class="cv-col en">Seoul National University Vision and Learning Lab (Advisor: Gunhee Kim)</div>
-          <div class="cv-col en">undergrad intern</div>
-          <div class="cv-col date">2025.03 – present.</div>
+        <div class="bio">
+          <p>
+            I am a first-year M.S./Ph.D. student at
+            <span class="highlight">Vision and Learning Lab (SNUVL)</span>, <br>
+            advised by <span class="prof-highlight">Prof. Gunhee Kim</span>. <br>
+            My research focuses on multi-modal AI, particularly speech language models<br>
+            and omni-modal learning, with a goal of enabling more natural and realistic<br>
+            human communication in LLMs.
+          </p>
         </div>
       </div>
-    </div>
+    </header>
 
-    <!-- research interests -->
-    <div class="section section-interests">
-      <div class="section-title">research interests</div>
-      <hr class="custom-line">
-      <div class="cv cv-1col">
-        <div class="cv-row"><div class="cv-col">multimodal ai, especially audio-language and vision-language</div></div>
-        <div class="cv-row"><div class="cv-col">efficiently updating llms</div></div>
-      </div>
-    </div>
-
-    <!-- papers -->
-    <div class="section section-papers">
-      <div class="section-title">papers?</div>
-      <hr class="custom-line">
-      <div class="cv cv-1col">
-        <div class="cv-row"><div class="cv-col paper-title">MemEIC: A Step Toward Continual and Compositional Knowledge Editing</div></div>
-        <div class="cv-row"><div class="cv-col paper-authors">Jin Seong, Jiyun Park, Wencke Liermann, Hongseok Choi, Yoonji Nam, Hyun Kim, Soojong Lim, Namhoon Lee</div></div>
-        <div class="cv-row"><div class="cv-col paper-conf">NeurIPS 2025</div></div>
-      </div>
-    </div>
-
-    <!-- free time -->
-    <div class="section section-free">
-      <div class="section-title">in my free time</div>
-      <hr class="custom-line">
-      <div class="cv">
-        <div class="cv-row">
-          <div class="cv-col">photography</div>
-          <div class="cv-col">
-            <a href="https://www.instagram.com/0__.0__.0__?igsh=MTFhd253ZXlja3ZveA==" target="_blank" rel="noopener">@0__.0__.0__</a>
-          </div>
-          <div class="cv-col date"></div>
+    <!-- Publications Section -->
+    <section class="section">
+      <h2 class="section-title">Publications.</h2>
+      <div class="section-content">
+        <div class="publication">
+          <p class="pub-title">MemEIC: A Step Toward Continual and Compositional Knowledge Editing</p>
+          <p class="pub-authors">
+            Jin Seong, Jiyun Park, Wencke Liermann, Hongseok Choi, <span class="author-me">Yoonji Nam</span>, Hyun Kim,
+            Soojong Lim, Namhoon Lee
+          </p>
+          <p class="pub-venue">NeurIPS 2025</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- contact -->
-    <div class="note">
-      /contact<br />yoon7k3@gmail.com or seinundzeit@g.skku.edu
-    </div>
+    <!-- Experiences Section -->
+    <section class="section">
+      <h2 class="section-title">Experiences.</h2>
+      <div class="section-content">
+        <div class="experience">
+          <p class="exp-title">ETRI (Electronics and Telecommunications Research Institute)</p>
+          <p class="exp-role">Research Intern</p>
+          <p class="exp-date">Jan 2025 – Feb 2025</p>
+        </div>
+        <div class="experience">
+          <p class="exp-title">Asan Medical Center</p>
+          <p class="exp-role">Research Assistant</p>
+          <p class="exp-date">Jun 2026 – Aug 2023</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education.</h2>
+      <div class="section-content">
+        <div class="education">
+          <p class="edu-title">Seoul National University</p>
+          <p class="edu-role">Ph.D. in Computer Science and Engineering</p>
+          <p class="snu-date">Mar 2026 – Present</p>
+        </div>
+        <div class="education">
+          <p class="edu-title">Sunkyunkwan University (SKKU)</p>
+          <p class="edu-role">Bachelor of Data Science</p>
+          <p class="skku-date">Feb 2022 – Feb 2026</p>
+        </div>
+      </div>
+    </section>
+
   </div>
-
-  <script>
-  // escape backslashes in the ASCII banner only
-  (function () {
-    const el = document.querySelector('.ascii-art code') || document.querySelector('.ascii-art');
-    if (!el) return;
-    el.innerHTML = el.textContent.replace(/\\/g, '&#92;');
-  })();
-  </script>
 </body>
+
 </html>

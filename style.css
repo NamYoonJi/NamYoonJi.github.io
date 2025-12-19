@@ -230,6 +230,85 @@ a:hover {
   color: #02664d;
 }
 
+.edu-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -3px;
+}
+
+.toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.edu-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0;
+}
+
+.edu-details.open {
+  max-height: 200px;
+  padding-top: 12px;
+}
+
+.edu-details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.edu-details li {
+  font-size: 13px;
+  color: #aaaaaa;
+  margin-bottom: 6px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.edu-details li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #02664d;
+}
+
+/* Easter Egg */
+.easter-egg {
+  text-align: center;
+  padding: 30px 0 10px 0;
+  margin-top: 20px;
+  margin-bottom: -40px;
+}
+
+.easter-egg p {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.easter-egg p:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   body {

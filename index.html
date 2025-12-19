@@ -18,7 +18,6 @@
     <!-- Header Section -->
     <header class="header">
       <div class="profile-photo">
-        <!-- 프로필 사진을 여기에 추가하세요 -->
         <img src="yjn_profile.jpg" alt="Yoonji Nam">
       </div>
       <div class="profile-info">
@@ -84,14 +83,38 @@
           <p class="snu-date">Mar 2026 – Present</p>
         </div>
         <div class="education">
-          <p class="edu-title">Sunkyunkwan University (SKKU)</p>
+          <div class="edu-header">
+            <p class="edu-title">Sunkyunkwan University (SKKU)</p>
+            <!-- <button class="toggle-btn" onclick="toggleDetails(this)">+</button> -->
+          </div>
           <p class="edu-role">Bachelor of Data Science</p>
           <p class="skku-date">Feb 2022 – Feb 2026</p>
+          <div class="edu-details">
+            <ul>
+              <li>Summa cum laude</li>
+              <li>GPA: 99.5 (4.45 out of 4.5)</li>
+              <li>Relevant Coursework: Machine Learning, Deep Learning, NLP</li>
+              <li>Honors: Dean's list, academic excellence scholarship, SW mentoring best award</li>
+              <li>Teaching Experiences: Teaching assistant for AI Basics and Uses course</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
+    <footer class="easter-egg">
+      <p>For those who made it here, thank you! Hope you have a wonderful day! ✨</p>
+    </footer>
+
   </div>
+
+  <script>
+    function toggleDetails(btn) {
+      const details = btn.closest('.education').querySelector('.edu-details');
+      details.classList.toggle('open');
+      btn.textContent = details.classList.contains('open') ? '−' : '+';
+    }
+  </script>
 </body>
 
 </html>

@@ -120,6 +120,7 @@ a:hover {
   margin-bottom: 12px;
   letter-spacing: -0.02em;
   background: linear-gradient(to right, #ffffff, #94a3b8);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -233,6 +234,18 @@ a:hover {
   color: #7dd3fc;
   /* Light Blue */
   font-weight: 500;
+}
+
+.pub-venue .pub-link {
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-left: 8px;
+  font-size: 12px;
+  transition: color 0.2s ease;
+}
+
+.pub-venue .pub-link:hover {
+  color: var(--accent-color);
 }
 
 /* Experiences & Education */
@@ -387,7 +400,7 @@ a:hover {
     flex-direction: column;
     align-items: flex-start;
   }
- 
+
   .exp-date,
   .snu-date,
   .skku-date {

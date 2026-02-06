@@ -127,7 +127,7 @@ a:hover {
 }
 
 .title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--text-secondary);
   margin-bottom: 4px;
@@ -239,7 +239,7 @@ a:hover {
 .pub-venue .pub-link {
   color: var(--text-secondary);
   font-weight: 400;
-  margin-left: 8px;
+  margin-left: 12px;
   font-size: 12px;
   transition: color 0.2s ease;
 }

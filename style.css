@@ -383,15 +383,6 @@ a:hover {
   margin-bottom: 0;
 }
 
-.edu-details li::before {
-  content: ">";
-  position: absolute;
-  left: 0;
-  color: var(--accent-color);
-  font-size: 10px;
-  top: 4px;
-}
-
 /* Easter Egg - Reverted */
 .easter-egg {
   text-align: center;

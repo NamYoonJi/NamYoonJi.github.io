@@ -410,49 +410,6 @@ a:hover {
   margin-bottom: 0;
 }
 
-/* Projects */
-.project {
-  margin-bottom: 18px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid transparent;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.project:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
-}
-
-.project-title {
-  color: var(--text-primary);
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.project .item-description {
-  margin-top: 8px;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 14px;
-}
-
-.tags span {
-  padding: 3px 8px;
-  color: var(--accent-color);
-  background: var(--highlight-bg);
-  border: 1px solid rgba(142, 169, 212, 0.16);
-  border-radius: 4px;
-  font-size: 11px;
-  font-weight: 500;
-}
-
 .recognition-list {
   margin-top: 20px;
   padding: 18px 20px 18px 38px;
